@@ -31,8 +31,9 @@ CREATE TABLE inscricao (
 CREATE TABLE palestra (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100),
-    evento_id INTEGER REFERENCES evento (id) ON DELETE CASCADE,
+    duracao INTEGER CHECK (duracao >= 0),
     data_hora TIMESTAMP
+    evento_id INTEGER REFERENCES evento (id) ON DELETE CASCADE,
 );
 
 CREATE TABLE palestrante (
