@@ -58,3 +58,4 @@ SELECT * FROM (
 
 SELECT evento.nome FROM evento_id
     WHERE evento.localidade = 'Expo Center Norte';
+
